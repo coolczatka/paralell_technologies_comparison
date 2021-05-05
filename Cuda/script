@@ -1,0 +1,8 @@
+FILE=$1.txt
+if test -f "$FILE"; then
+    rm $FILE
+fi
+for i in $(seq 30)
+do
+  ./disarium $1 >> $FILE
+done
